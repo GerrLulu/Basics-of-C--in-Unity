@@ -7,10 +7,12 @@ namespace Geekbrains
         public float Speed = 15.0f;
         private Rigidbody _rigidbody;
 
+
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody>();
         }
+
 
         protected void Move()
         {
