@@ -6,20 +6,13 @@ namespace Geekbrains
     public abstract class InteractiveObject : MonoBehaviour, IInteractable
     {
         protected Color _color;
+
         public bool IsInteractable { get; } = true;
-        protected abstract void Interaction();
+
 
         private void Start()
         {
             Action();
-        }
-
-        public void Action()
-        {
-            if (TryGetComponent(out Renderer renderer))
-            {
-                renderer.material.color = Random.ColorHSV();
-            }
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -30,6 +23,17 @@ namespace Geekbrains
                 Destroy(gameObject);
             }
             return;
+        }
+
+
+        protected abstract void Interaction();
+
+        public void Action()
+        {
+            if (TryGetComponent(out Renderer renderer))
+            {
+                renderer.material.color = Random.ColorHSV();
+            }
         }
     }
 }
