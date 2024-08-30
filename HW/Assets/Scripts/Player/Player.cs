@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Geekbrains
+namespace PlayerNS
 {
     public class Player : MonoBehaviour
     {

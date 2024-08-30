@@ -1,7 +1,8 @@
+using Interface;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Geekbrains
+namespace InteractiveObjectNS
 {
     public abstract class InteractiveObject : MonoBehaviour, IInteractable
     {

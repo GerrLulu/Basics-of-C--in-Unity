@@ -1,22 +1,25 @@
+using Interface;
 using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Geekbrains
+namespace InteractiveObjectNS.Bonuses
 {
     public sealed class SlowdownBonus : InteractiveObject, IFly, IRotation, ICloneable
     {
         private float _lengthFly;
         private float _speedRotation;
 
-        public delegate void CaughtPlayerChange();
         public event CaughtPlayerChange CaughtPlayer;
+        public delegate void CaughtPlayerChange();
+
 
         private void Awake()
         {
             _lengthFly = Random.Range(1.0f, 2.0f);
             _speedRotation = Random.Range(10.0f, 50.0f);
         }
+
 
         protected override void Interaction()
         {

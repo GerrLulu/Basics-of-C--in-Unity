@@ -1,16 +1,18 @@
 using UnityEngine.UI;
-using UnityEngine;
 
-namespace Geekbrains
+namespace UI
 {
     public sealed class DisplayBonuses
     {
-        private Text _text;
         private int _sum = 0;
+        private Text _text;
+
+
         public DisplayBonuses(Text text)
         {
             _text = text;
         }
+
 
         public void PlusBonus(int value)
         {

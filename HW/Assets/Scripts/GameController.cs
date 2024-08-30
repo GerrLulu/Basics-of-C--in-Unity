@@ -1,3 +1,8 @@
+using InteractiveObjectNS;
+using InteractiveObjectNS.Bonuses;
+using Interface;
+using PlayerNS;
+using UI;
 using System;
 using UnityEngine;
 using UnityEngine.UI;

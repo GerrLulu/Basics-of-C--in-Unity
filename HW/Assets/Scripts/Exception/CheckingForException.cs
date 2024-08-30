@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Geekbrains
+namespace ExceptionNS
 {
     public class CheckingForException : MonoBehaviour
     {
@@ -14,7 +14,7 @@ namespace Geekbrains
             }
             catch(GameDesignerException e)
             {
-                Debug.LogWarning($"Объект {e.TagPlayer} {e.Message} {e.TagLvlObject}");
+                Debug.LogWarning($"Объект {e.TagPlayer} {e.Message} {e.TagLevelObject}");
             }
         }
     }

@@ -1,11 +1,13 @@
 using UnityEngine;
+using PlayerNS;
 
-namespace Geekbrains
+namespace Camera
 {
     public sealed class CameraController : MonoBehaviour
     {
         public Player Player;
         private Vector3 _offset;
+
 
         private void Start()
         {

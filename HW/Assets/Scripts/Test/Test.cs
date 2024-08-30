@@ -1,7 +1,7 @@
-using System.IO;
+using InteractiveObjectNS.Bonuses;
 using UnityEngine;
 
-namespace Geekbrains
+namespace Test
 {
     public sealed class Test : MonoBehaviour
     {

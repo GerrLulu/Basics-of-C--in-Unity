@@ -1,22 +1,25 @@
+using Interface;
 using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Geekbrains
+namespace InteractiveObjectNS.Bonuses
 {
     public sealed class SpeedBonus : InteractiveObject, IFly, IFlicker, ICloneable
     {
-        private Material _material;
         private float _lengthFly;
+        private Material _material;
 
         public delegate void CaughtPlayerChange();
         public event CaughtPlayerChange CaughtPlayer;
+
 
         private void Awake()
         {
             _material = GetComponent<Renderer>().material;
             _lengthFly = Random.Range(1.0f, 2.0f);
         }
+
 
         protected override void Interaction()
         {

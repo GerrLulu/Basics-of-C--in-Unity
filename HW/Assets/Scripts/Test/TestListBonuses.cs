@@ -1,14 +1,17 @@
+using InteractiveObjectNS.Bonuses;
 using System;
 using Object = UnityEngine.Object; 
 
-namespace Geekbrains
+namespace Test
 {
     public sealed class TestListBonuses<T>
     {
         private GoodBonus[] _goodBonuses;
         private BadBonus[] _badBonuses;
-
         private T[] _testListBonuses;
+
+        public int Count => _testListBonuses.Length;
+
 
         public TestListBonuses()
         {
@@ -19,12 +22,11 @@ namespace Geekbrains
             Array.Sort(_badBonuses);
         }
 
+
         public T this [int index]
         {
             get => _testListBonuses[index];
             set => _testListBonuses[index] = value;
         }
-
-        public int Count => _testListBonuses.Length;
     }
 }
