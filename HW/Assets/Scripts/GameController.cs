@@ -11,10 +11,12 @@ namespace Geekbrains
 {
     public sealed class GameController : MonoBehaviour, IDisposable
     {
-        private InteractiveObject[] _interactiveObjects;
         public Text _text;
-        private DisplayBonuses _displayBonuses;
         public PlayerBall _playerBall;
+
+        private InteractiveObject[] _interactiveObjects;
+        private DisplayBonuses _displayBonuses;
+
 
         private void Awake()
         {
